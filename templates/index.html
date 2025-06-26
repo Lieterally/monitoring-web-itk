@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Monitoring Web ITK</title>
+
+    <!-- SB Admin 2 CSS -->
+    <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/sb-admin-2.min.css') }}" rel="stylesheet" />
+  </head>
+  <body class="bg-light">
+    <div class="container">
+      <div class="card shadow mb-4 text-center">
+        <h1 class="m-4 font-weight-bold text-primary">MONITORING WEB ITK</h1>
+      </div>
+
+      <!-- DataTales Example -->
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <div class="row">
+            <div class="col">
+              <h6 class="m-0 font-weight-bold text-primary">Summary</h6>
+            </div>
+            <div class="col text-right">
+              <p class="mb-0">Last checked: <span id="last-check" class="fw-bold">Loading...</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Unit</th>
+                  <th>Link</th>
+                  <th>Status</th>
+                  <th>Avg. Response Time (s)</th>
+                </tr>
+              </thead>
+
+              <tbody id="summary-table">
+                <!-- JS will populate -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="details-container">
+        <!-- JS will populate -->
+      </div>
+    </div>
+
+    <script>
+      async function loadStatus() {
+        const res = await fetch("/status");
+        const data = await res.json();
+
+        document.getElementById("last-check").innerText = data.last_check;
+
+        const summaryBody = document.getElementById("summary-table");
+        summaryBody.innerHTML = "";
+
+        const detailsContainer = document.getElementById("details-container");
+        detailsContainer.innerHTML = "";
+
+        data.monitored.forEach((site) => {
+          // Summary Row
+          const row = document.createElement("tr");
+          row.innerHTML = `
+                    <td>${site.name}</td>
+                    <td><a href="${site.base_url}" target="_blank">${site.base_url}</a></td>
+                    <td>${site.overall_status}</td>
+                    <td>${site.avg_response_time}</td>
+                `;
+          summaryBody.appendChild(row);
+
+          // Detail Section
+          let detailHTML = `
+                    <h3 class="mt-5">${site.name} — <a href="${site.base_url}" target="_blank">${site.base_url}</a></h3>
+                    <table class="table table-hover table-sm">
+                        <thead>
+                            <tr>
+                                <th>Menu URL</th>
+                                <th>Status</th>
+                                <th>Response Time (s)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+          site.statuses.forEach((entry) => {
+            detailHTML += `
+                        <tr>
+                            <td><a href="${entry.url}" target="_blank">${entry.url}</a></td>
+                            <td>${entry.status}</td>
+                            <td>${entry.response_time}</td>
+                        </tr>
+                    `;
+          });
+          detailHTML += "</tbody></table>";
+          detailsContainer.innerHTML += detailHTML;
+        });
+      }
+
+      loadStatus();
+      setInterval(loadStatus, 60000);
+    </script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
+    <!-- SB Admin 2 custom scripts -->
+    <script src="{{ url_for('static', filename='js/sb-admin-2.min.js') }}"></script>
+  </body>
+</html>

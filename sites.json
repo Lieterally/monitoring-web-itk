@@ -1,0 +1,352 @@
+[
+    {
+        "name": "Prodi Teknik Sipil",
+        "base_url": "https://ce.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+    {
+        "name": "Prodi Teknik Kimia",
+        "base_url": "https://che.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Teknik Elektro",
+        "base_url": "https://ee.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Teknik Lingkungan",
+        "base_url": "https://enviro.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Teknik Industri",
+        "base_url": "https://ie.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Teknik Informatika",
+        "base_url": "https://if.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Sistem Informasi",
+        "base_url": "https://si.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Matematika",
+        "base_url": "https://math.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Teknik Mesin",
+        "base_url": "https://me.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Teknik Material Metalurgi",
+        "base_url": "https://mme.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Teknik Perkapalan",
+        "base_url": "https://na.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Teknik Kelautan",
+        "base_url": "https://oe.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Fisika",
+        "base_url": "https://phy.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Perencanaan Wilayah dan Kota",
+        "base_url": "https://urp.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Arsitektur",
+        "base_url": "https://ars.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Statistika",
+        "base_url": "https://stat.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Ilmu Aktuaria",
+        "base_url": "https://actsci.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Teknik Pangan",
+        "base_url": "https://foodtech.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Rekayasa Keselamatan",
+        "base_url": "https://safetyeng.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Bisnis Digital",
+        "base_url": "https://bisnisdigital.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+        {
+        "name": "Prodi Desain Komunikasi Visual",
+        "base_url": "https://dkv.itk.ac.id",
+        "menus": [
+            "/", 
+        "/berita", 
+        "/profile/sejarah",
+        "/profile/visimisi", 
+        "/akademik/kurikulum",
+        "/akademik/silabus",
+        "/kemahasiswaan/ormawa", 
+        "/penelitian/grup_penelitan",
+        "/kontak",
+        "/login"
+    ]
+    },
+    {
+        "name": "Repository",
+        "base_url": "https://repository.itk.ac.id",
+        "menus": [
+            "/"
+    ]
+    },
+    {
+        "name": "Perpustakaan",
+        "base_url": "https://perpustakaan.itk.ac.id",
+        "menus": [
+            "/"
+    ]
+    }
+]
