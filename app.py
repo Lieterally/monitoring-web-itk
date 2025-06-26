@@ -1,12 +1,16 @@
 from flask import Flask, render_template, jsonify
 import requests
+import os
 import json
 from datetime import datetime
+
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 app = Flask(__name__)
 
 def load_sites():
-    with open("sites.json") as f:
+    with open(os.path.join(BASE_DIR, "sites.json")) as f:
         return json.load(f)
 
 def check_site(base_url, menus):
