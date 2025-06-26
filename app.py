@@ -4,6 +4,7 @@ import os
 import json
 from datetime import datetime
 
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 app = Flask(__name__)
@@ -22,7 +23,7 @@ def check_site(base_url, menus):
     for menu in menus:
         url = base_url + menu
         try:
-            r = requests.get(url, timeout=5, verify=False)  # 🛡️ Disable SSL verification
+            r = requests.get(url, timeout=5)
             elapsed = r.elapsed.total_seconds()
             total_time += elapsed
             count += 1
@@ -34,14 +35,13 @@ def check_site(base_url, menus):
                     login_down = True
                 else:
                     utama_down = True
-        except requests.RequestException as e:
-            print(f"❌ Request failed for {url}: {e}")
+        except requests.RequestException:
             status = "❌ DOWN"
-            elapsed = 0
             if menu == "/login":
                 login_down = True
             else:
                 utama_down = True
+            elapsed = 0
 
         statuses.append({
             "url": url,
@@ -69,26 +69,30 @@ def index():
 
 @app.route("/status")
 def status():
+    
+    
     try:
         sites = load_sites()
         print("✅ sites loaded")
-        monitored = []
-        for site in sites:
-            statuses, overall_status, avg_response_time = check_site(site["base_url"], site["menus"])
-            monitored.append({
-                "name": site["name"],
-                "base_url": site["base_url"],
-                "overall_status": overall_status,
-                "avg_response_time": avg_response_time,
-                "statuses": statuses
-            })
-        return jsonify({
-            "last_check": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "monitored": monitored
-        })
+        ...
     except Exception as e:
-        print("❌ Error in /status:", e)
-        return jsonify({"error": str(e)}), 500
+        print("❌ error in /status:", e)
+        
+    sites = load_sites()
+    monitored = []
+    for site in sites:
+        statuses, overall_status, avg_response_time = check_site(site["base_url"], site["menus"])
+        monitored.append({
+            "name": site["name"],
+            "base_url": site["base_url"],
+            "overall_status": overall_status,
+            "avg_response_time": avg_response_time,
+            "statuses": statuses
+        })
+    return jsonify({
+        "last_check": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "monitored": monitored
+    })
 
 if __name__ == "__main__":
     app.run(debug=True)
