@@ -2,8 +2,12 @@ from flask import Flask, render_template, jsonify
 import requests
 import os
 import json
+import urllib3
+
+
 from datetime import datetime
 
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -23,7 +27,7 @@ def check_site(base_url, menus):
     for menu in menus:
         url = base_url + menu
         try:
-            r = requests.get(url, timeout=5)
+            r = requests.get(url, timeout=5, verify=False)
             elapsed = r.elapsed.total_seconds()
             total_time += elapsed
             count += 1
