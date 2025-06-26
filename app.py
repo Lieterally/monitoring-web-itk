@@ -65,6 +65,15 @@ def index():
 
 @app.route("/status")
 def status():
+    
+    
+    try:
+        sites = load_sites()
+        print("✅ sites loaded")
+        ...
+    except Exception as e:
+        print("❌ error in /status:", e)
+        
     sites = load_sites()
     monitored = []
     for site in sites:
