@@ -23,28 +23,28 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # When using sites.json ------------------
 
-# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
-# def load_sites():
-#     with open(os.path.join(BASE_DIR, "sites.json")) as f:
-#         return json.load(f)
+def load_sites():
+    with open(os.path.join(BASE_DIR, "sites.json")) as f:
+        return json.load(f)
 
 
 
 # When using db --------------------
 
-def load_sites():
-    with app.app_context():
-        websites = Website.query.all()
-        sites = []
-        for site in websites:
-            sites.append({
-                "nama_web": site.nama_web,
-                "link_web": site.link_web,
-                "halaman_web": [page.halaman_web for page in site.pages]
-            })
-        return sites
+# def load_sites():
+#     with app.app_context():
+#         websites = Website.query.all()
+#         sites = []
+#         for site in websites:
+#             sites.append({
+#                 "nama_web": site.nama_web,
+#                 "link_web": site.link_web,
+#                 "halaman_web": [page.halaman_web for page in site.pages]
+#             })
+#         return sites
 
 def check_site(link_web, halaman_web):
     statuses = []
@@ -143,5 +143,9 @@ def status():
     response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
     return response
 
+# if __name__ == "__main__":
+#     app.run(debug=True)
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
