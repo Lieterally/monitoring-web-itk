@@ -143,9 +143,19 @@ def status():
     response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
     return response
 
-# if __name__ == "__main__":
-#     app.run(debug=True)
+
+@app.route("/test-api")
+def test_api():
+    try:
+        url = "http://nvr.itk.ac.id"  # Replace this
+        response = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+        return f"Status: {response.status_code}<br>Body: {response.text}"
+    except Exception as e:
+        return f"Request failed: {e}"
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    app.run(debug=True)
+
+# if __name__ == "__main__":
+#     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
